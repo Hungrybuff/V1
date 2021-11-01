@@ -1,0 +1,175 @@
+{
+  "project_info": {
+    "project_number": "467138133528",
+    "firebase_url": "https://hungrybuff-dev.firebaseio.com",
+    "project_id": "hungrybuff-dev",
+    "storage_bucket": "hungrybuff-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467138133528:android:0c3db11b9f56933a898d6d",
+        "android_client_info": {
+          "package_name": "com.hungrybuff.hungrubuff.stagging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQF-tHZGLUgHg5jRwQCEMFXG_05fsu1xM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467138133528-l41rhcervn06j288struvbnnvh8sm19c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.diverseit.hungrybuff",
+                "app_store_id": "20201025"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467138133528:android:2b39a7e2761619d8898d6d",
+        "android_client_info": {
+          "package_name": "com.hungrybuff.hungrybuff.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467138133528-ajelfojv0gmeln0ffs65bcaem6mifml0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungrybuff.hungrybuff.dev",
+            "certificate_hash": "d5d06902a38a18b02be1bb53dfb57454b9b0f358"
+          }
+        },
+        {
+          "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQF-tHZGLUgHg5jRwQCEMFXG_05fsu1xM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467138133528-l41rhcervn06j288struvbnnvh8sm19c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.diverseit.hungrybuff",
+                "app_store_id": "20201025"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467138133528:android:4733b230d51eb059898d6d",
+        "android_client_info": {
+          "package_name": "com.hungrybuff.hungrybuff.owner.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467138133528-srv7jeesb3io7nm5qvql6mqe73lmcb5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungrybuff.hungrybuff.owner.dev",
+            "certificate_hash": "d5d06902a38a18b02be1bb53dfb57454b9b0f358"
+          }
+        },
+        {
+          "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQF-tHZGLUgHg5jRwQCEMFXG_05fsu1xM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467138133528-l41rhcervn06j288struvbnnvh8sm19c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.diverseit.hungrybuff",
+                "app_store_id": "20201025"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467138133528:android:ee1a2f381391b03a898d6d",
+        "android_client_info": {
+          "package_name": "com.hungrybuff.hungrybuff.owner.stagging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQF-tHZGLUgHg5jRwQCEMFXG_05fsu1xM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467138133528-7bntprs275aq55f9cubk3r016buqjmho.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467138133528-l41rhcervn06j288struvbnnvh8sm19c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.diverseit.hungrybuff",
+                "app_store_id": "20201025"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1 @@
+enum state { loading, data }

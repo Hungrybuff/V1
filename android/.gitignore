@@ -1,0 +1,9 @@
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+/app/src/debug/gen/com/hungrybuff/hungrybuff/Manifest.java
+/app/src/debug/gen/com/hungrybuff/hungrybuff/R.java

@@ -1,0 +1,138 @@
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+0}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+apply plugin: 'io.fabric'
+
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+logger.info('keystore Exists')
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}else {
+    keystoreProperties.setProperty('storePassword', System.getenv('KEY_STORE_PASSWORD'))
+    keystoreProperties.setProperty('keyPassword', System.getenv('KEY_PASSWORD'))
+    keystoreProperties.setProperty('keyAlias', System.getenv('ALIAS'))
+    keystoreProperties.setProperty('storeFile', System.getenv('KEY_PATH'))
+}
+
+def debugkeystoreProperties = new Properties()
+def debugkeystorePropertiesFile = rootProject.file('debugkey.properties')
+if (debugkeystorePropertiesFile.exists()) {
+    debugkeystoreProperties.load(new FileInputStream(debugkeystorePropertiesFile))
+}else {
+    debugkeystoreProperties.setProperty('storePassword', System.getenv('KEY_STORE_PASSWORD'))
+    debugkeystoreProperties.setProperty('keyPassword', System.getenv('KEY_PASSWORD'))
+    debugkeystoreProperties.setProperty('keyAlias', System.getenv('ALIAS'))
+    debugkeystoreProperties.setProperty('storeFile', System.getenv('KEY_PATH'))
+}
+
+android {
+    compileSdkVersion 28
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId "com.hungrybuff.hungrybuff"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile rootProject.file("key/key.jks")
+            storePassword keystoreProperties['storePassword']
+        }
+        debug{
+            keyAlias debugkeystoreProperties['keyAlias']
+            keyPassword debugkeystoreProperties['keyPassword']
+            storeFile rootProject.file("key/debug.keystore")
+            storePassword debugkeystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            shrinkResources false
+            zipAlignEnabled false
+            minifyEnabled false
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    flavorDimensions "flavors"
+    productFlavors {
+        dev_owner {
+            dimension "flavors"
+            applicationIdSuffix ".owner.dev"
+            versionNameSuffix " DevOwner"
+        }
+        dev_user {
+            dimension "flavors"
+            applicationIdSuffix ".dev"
+            versionNameSuffix " DevUser"
+        }
+
+        stagging_owner {
+            dimension "flavors"
+            applicationIdSuffix ".owner.stagging"
+            versionNameSuffix " StaggingOwner"
+        }
+        stagging_user {
+            dimension "flavors"
+            applicationIdSuffix ".stagging"
+            versionNameSuffix " StaggingUser"
+        }
+
+        production_owner {
+            dimension "flavors"
+            applicationIdSuffix ".owner"
+        }
+        production_user {
+            dimension "flavors"
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+
+}
